@@ -1,2 +1,2 @@
 #!/bin/bash
-sed -n 'p;n' "$1"
+count=0 while read -r line; do if [ $((count++ % 2)) -eq 0 ]; then echo "$line" fi done < "$1"
