@@ -1,0 +1,1 @@
+This directory contains exercises and projects related to understanding processes and signals in Unix-like operating systems. The focus is on managing processes, handling signals, and utilizing various command-line tools to monitor and manipulate processes.

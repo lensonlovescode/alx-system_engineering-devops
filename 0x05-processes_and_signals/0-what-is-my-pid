@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#Thsi scripts displays its own PID
+current_pid=$$
+echo "$current_pid"
