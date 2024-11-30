@@ -1,0 +1,27 @@
+https://imgur.com/wAk8mtL
+
+Some specifics about this infrastructure:
+
+1. What is a server
+A server is a computer that provides information to other computers called "clients" on demand over a network
+2. What is the role of the domain name
+A domain name gives easy to remember names to computers which are identified by ip addresses
+3. What type of DNS record www is in www.foobar.com
+It is a CNAME record because it aliases www.foobar.com to just foobar.com, which are effectively the same destination
+4. What is the role of the web server
+A web server 'serves' web content such as html documents files or other data to clients over the internet
+5. What is the role of the application server
+An application handles the logic of the application, doing all computation and serving up dynamic content
+6. What is the role of the database
+The database stores, manages, updates and retrieves all data for the applications
+7. What is the server using to communicate with the computer of the user requesting the website
+The sever communicates using either HTTP or HTTPS protocols
+-- issues are with this infrastructure --
+1. SPOF
+'Single Point of Failure' means that if any part of the application fails or goes down, the whole application effectively goes down with it
+If for example the web server goes down, no user can acess the website
+2. Downtime when maintenance needed
+If maintenance needs to be done or new code needs to be deployed, in between, the application is unusable, only after is the application able
+to be used
+3. scaling
+if there's too much incoming traffic, that one server gets overloaded and can crash
