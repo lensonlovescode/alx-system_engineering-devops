@@ -1,0 +1,38 @@
+https://imgur.com/lvdVBpl
+Some specifics about this infrastructure:
+
+1. What are firewalls
+Firewalls filter all incoming or outgoing traffic based on some rules
+
+2. Why is the traffic served over HTTPS
+With HTTPS, all data sent over the network is encrypted, therefore secure.
+
+What monitoring is used for
+Monitoring is used to watch metrics, record them, and alert if any anomalies that could make the computer not work properly detected.
+
+How the monitoring tool is collecting data
+Some monitoring tools require adding some piece of code into the code base like JavaScript code
+this code will collect all data/metrics and send to some servers for analysis.
+
+What to do if you want to monitor your web server QPS:
+Using Web Server Logs for example Nginx Logs:
+
+Issues are with this infrastructure:
+
+1. Terminating SSL at the load balancer level:
+Terminating SSL at the load balancer level implies that communication
+between the load balancer and the servers is unencrypted (HTTP instead of HTTPS)
+posing serious security issues.
+
+
+2. Why having only one MySQL server capable of accepting writes is an issue:
+Having only one means that a single point of failure can occur on the database
+and when the database is unable to process write requests like creating new accounts ,the application
+becomes unusable especially for features depending on writing to the database
+
+3. Why having servers with all the same components (database, web server and application server) might be a problem
+This brings up scalability issues for the infrastructure. 
+It would require adding more servers, all which have the same components
+(which can be very expensive, especially memory and CPU), duplicating the entire stack
+also brings up issues with space(more space is required), power(more power is required to run
+the extra servers, adding also to carbon emissions), labour and so many other issues, It's mainly a scaling issue.
