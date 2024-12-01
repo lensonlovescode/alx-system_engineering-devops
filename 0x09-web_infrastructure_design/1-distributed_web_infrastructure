@@ -1,0 +1,40 @@
+Specifics about this infrastructure:
+
+1. Algorithm on the load balancer:
+The load balancer runs the Round Robin algorithm. Traffic is distributed in
+form of a queue, each sever on the queue takes turns handling client connection requests
+
+2. Active-Active or Active-Passive setup?
+My server configuration is running an active active set up, this means that both
+nodes are actively processing client requests when needed to by the load balancer.
+The difference between an active active setup and an active passive setup is that
+in an active setup. All nodes in the setup are actively processing requests, while
+in an active passive setup, at least one node is passive i.e not handling requests, and
+only goes up if the main server goes down, it acts as a backup.
+
+3. How a database Primary-Replica (Master-Slave) cluster works
+It employs two database nodes, one the master, the other the slave.
+The master DB handles all write operations including inserts deletes and updates operations
+while the slave db handles all read operations. Any changes made in the master are automatically
+synchronized with the slave. In case the master goes down, the slave is promoted to the master
+
+4. The difference between the Primary node and the Replica node in regard to the application
+The major difference is that the primary node handles all write operations while the slave node
+handles all read operations, exclusively.
+
+Issues with this infrastructure:
+A. SPOF
+The single point of failure in this at both the load balancer and the servers themselves.
+Since no backup set-up exist for this infrastructure, any failure for any component in the architecture
+will result in the whole applications to fail
+
+B. Security issues
+There is no firewall for any of the components, i.e servers and load balancer
+therefore incoming traffic is not being actively monitored.
+Also, HTTPS is not being used, which is a secure version of HTTP, as it encrypts any data going out
+This makes the system vulnerable to attacks such as man in the middle attacks
+
+3. No monitoring
+There is no active monitoring, metrics help look into performance and resource utilization.
+This means that if any server node gets overloaded (over-utilization) for example
+It'll be undetected and result in a system crash. Monitoring can also help in debugging system issues.
