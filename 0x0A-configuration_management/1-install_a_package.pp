@@ -1,8 +1,8 @@
 # A puppet script that installs version flask v2.1.0 on a node
-package {'python3-pip':
-  ensure => 'installed',
+exec {'pip3 install flask':
+  require => Exec['python-installed'],
+  command => '/usr/bin/pip3 install flask==2.1.0'
 }
-package {'flask':
-  ensure   => '2.1.0',
-  provider => 'pip3'
+exec {'python-installed':
+  command => '/usr/bin/which python3'
 }
