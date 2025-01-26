@@ -2,6 +2,5 @@
 #A bash script that installs Nginx on my web01 server
 sudo apt-get update
 sudo apt-get -y install nginx
-sed -i 's/listen [0-9]\+;/listen 80/g' etc/nginx/sites-available/default
 echo "Hello World!" > /var/www/html/index.html
 service nginx start
