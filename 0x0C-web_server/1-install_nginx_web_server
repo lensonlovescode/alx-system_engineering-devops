@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#A bash script that installs Nginx on my web01 server
+apt-get -y install nginx
+sed i 's/listen [0-9]\+;/listen 80/' etc/nginx/sites-available/default
+/etc/init.d/nginx start
