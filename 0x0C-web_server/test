@@ -1,0 +1,149 @@
+	server_name _;
+
+	location /redirect_me {
+		return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
+	}
+
+	location /redirect_me {
+		return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
+	}
+
+\tlocation /redirect_me {
+		return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
+	}
+
+location /redirect_me {
+		return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
+	}
+
+
+
+
+
+
+location /redirect_me {
+		return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
+	}
+
+server_name _;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+root /var/www/html;
+
+location /redirect_me {
+		return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
+}
+
+
+root /var/www/html;
+
+
+
+
+
+
+location /redirect_me {
+		return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
+	}
+
+
+
+
+
+
+location /redirect_me {
+		return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+location /redirect_me {
+		return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
+	}
+	location /redirect_me {
+		return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
+	}
+
+
+
+
+
+
+
+
+
+
+
+server {
+	location /redirect_me {
+		return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
+	}
+location /redirect_me {
+		return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
+	}
+location /redirect_me {
+		return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
+	}
+location /redirect_me {
+		return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
+	}
+location /redirect_me {
+		return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
+	}
+location /redirect_me {
+		return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
+	}
+tlocation /redirect_me {
+		return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
+	}
+tlocation /redirect_me {
+		return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
+	}
+location /redirect_me {
+		return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
+	}
+location /redirect_me {
+		return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
+	}
+.	location /redirect_me {
+		return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
+	}
++	location /redirect_me {
+		return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
+	}
+tlocation /redirect_me {
+		return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
+	}
+n	location /redirect_me {
+		return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
+	}
+
