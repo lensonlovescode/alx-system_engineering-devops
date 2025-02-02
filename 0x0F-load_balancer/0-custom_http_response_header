@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+before="location \/ {"
+after="add_header X-Served-By $(hostname)\;\n\n\tlocation \/ {"
+path="/etc/nginx/sites-available/default"
+sed -i "0,/$before/s|$before|$after|" "$path"
+sudo service nginx restart

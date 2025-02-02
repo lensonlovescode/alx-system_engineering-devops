@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+before="location / {"
+after="location / {\n\t\tadd_header X-Served-By $(hostname)"
+path="/etc/nginx/sites-available/default"
+sed -i "s|$before|$after|" "$path"
