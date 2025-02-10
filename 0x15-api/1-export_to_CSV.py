@@ -12,7 +12,7 @@ if __name__ == "__main__":
 
     url = "https://jsonplaceholder.typicode.com/"
 
-    name = requests.get(url + "users/" + sys.argv[1]).json().get('name')
+    name = requests.get(url + "users/" + sys.argv[1]).json().get('username')
     tasks = requests.get(url + "users/" + sys.argv[1] + "/todos").json()
 
     biglist = []
