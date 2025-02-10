@@ -7,21 +7,23 @@ import requests
 import sys
 
 
-url = "https://jsonplaceholder.typicode.com/"
+if __name__ == "__main__":
 
-name = requests.get(url + "users/" + sys.argv[1]).json().get('name')
-tasks = requests.get(url + "users/" + sys.argv[1] + "/todos").json()
-checklist = []
-completed = 0
-total = 0
+    url = "https://jsonplaceholder.typicode.com/"
 
+    name = requests.get(url + "users/" + sys.argv[1]).json().get('name')
+    tasks = requests.get(url + "users/" + sys.argv[1] + "/todos").json()
 
-for todo in tasks:
-    if todo.get('completed') is True:
-        completed += 1
-        checklist.append(todo.get('title'))
-    total += 1
+    checklist = []
+    done = 0
+    total = 0
 
-print(f"Employee {name} is done with tasks({completed}/{total}):\n\t ", end="")
+    for todo in tasks:
+        if todo.get('completed') is True:
+            done += 1
+            checklist.append(todo.get('title'))
+        total += 1
 
-print('\n\t '.join(checklist))
+    print(f"Employee {name} is done with tasks({done}/{total}):\n\t ", end="")
+
+    print('\n\t '.join(checklist))
