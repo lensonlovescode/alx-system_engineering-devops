@@ -13,11 +13,14 @@ def number_of_subscribers(subreddit):
     returns the number of subscribers
     """
 
-    url = "https://reddit.com/r/" + subreddit + ".json?limit=1"
+    url = "https://reddit.com/r/" + subreddit + "/about.json"
     headers = {"User-Agent": "my-bot/0.1"}
 
     response = requests.get(url, headers=headers).json()
     data = response.get('data')
-    children = data.get('children')
 
-    return(int(children[0].get('data').get('subreddit_subscribers')))
+    if (data is None):
+        return (0)
+    subscribers = data.get('subscribers')
+
+    return (int(subscribers))
