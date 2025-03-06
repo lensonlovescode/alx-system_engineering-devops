@@ -1,4 +1,9 @@
 # A puppet script that debugs a web server doing terribly under pressure
 exec { "replaceulimit":
-  command => "/bin/sed -i 's/15/1048576/' /etc/default/nginx",
+  command => 'sed -i "s/15/1048576/" /etc/default/nginx',
+  path    => '/usr/local/bin/:/bin/'
+}
+exec { "restartnginx":
+  command => 'sudo service nginx restart',
+  path    => '/etc/init.d/'
 }
